@@ -3,14 +3,14 @@
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
 - name: Python
   i18n: Jalpc
-  gh_user: Utkarsh Agrawal
-  repo: Jalpc
+  gh_user: agrawalsmart7
+  repo: Website
   img: /static/assets/img/landing/jekyll.png
   desc: This project is my website's project. I handle my website through it.
   
 - name: Python
   i18n: 
-  gh_user: Utkarsh Agrawal
+  gh_user: agrawalsmart7
   repo: tools
   img: /static/assets/img/landing/python.png
   desc: This project is other's project. I try to make tools so I created this repo for posting it.
