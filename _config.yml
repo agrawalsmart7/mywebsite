@@ -2,6 +2,7 @@
 
 # Website settings
 title: Utkarsh Agrawal
+heading: Home
 description: Testing
 baseurl:  / # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
 url: http://agrawalsmart7.com # url should be 'http://<github_username>.github.io/homepage' as before
