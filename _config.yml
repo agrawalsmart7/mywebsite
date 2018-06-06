@@ -26,7 +26,7 @@ author:  # change following line to your infomation.
   skill_icon2:
     - name: fa-linux
     - name: icon-apache
-  desc: Hi, I am Utkarsh agrawal and this is my website. I like to pentest websites but soon will also go for the network pentest. What I like the most is "Automation" in "Recon" so in future, you may found some blogs and projects which are related to Automation and Web-Security issues. # Describe yourself.
+  desc: I am Utkarsh agrawal and this is my website. I like to pentest websites but soon will also go for the network pentest. What I like the most is "Automation" so in future, you may found some blogs and projects which are related to Automation and Web-Security issues. # Describe yourself.
 
 # comment
 disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
