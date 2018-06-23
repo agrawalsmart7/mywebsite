@@ -11,8 +11,8 @@
 - name: Python
   i18n: 
   gh_user: agrawalsmart7
-  repo: tools
+  repo: AutoRecon
   img: /static/assets/img/landing/python.png
-  desc: This project is other's project. I try to make tools so I created this repo for posting it.
+  desc: This is the Automated tool for pentesters. For full description please read Readme file.
 
 
