@@ -1,0 +1,5 @@
+Hi all,
+
+This is a blog post for defining Blind XML External Entity. What is it? How to exploit it?. Why I choose this topic is because I found so much difficulty to understand it properly. Now I understand it so I decide to share it with you. Let's get started,
+
+For defining more clearly "The blind XXE" let's suppose I have a parameter which was parse by the mis-configured XML parser i.e. It parses the External entities. "http://target/xxe.php?xmldata={xml}"<a>aa</a>
