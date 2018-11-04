@@ -1,13 +1,16 @@
 Hi all,
 
-Welcome to my blog of "From basic XXE to blind XXE"
+&nbsp;  Welcome to my blog of "From basic XXE to blind XXE"
 
-What is XXE?
+## What is XXE?
 
 XXE is a short of XML External Entity, which is a vulnerablity found when misconfiguration XML parser parses enternal entities.
-There are two types of XXE:- 1. Basic 2. Blind.
+There are two types of XXE:- 
 
-Let's talk about 'basic' type:-
+1. Basic 
+2. Blind.
+
+&nbsp;  Let's talk about 'basic' type:- 
 
 For ex you have this url with a parameter that parses XML data. 'http://myapp.com/somefile.php?xml=<xml_data>'
 
