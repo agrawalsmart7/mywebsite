@@ -3,19 +3,18 @@ Hi all,
 &nbsp;  Welcome to my blog of "From basic XXE to blind XXE"<br><br>
 
 But first let's understand some basic keywords.
-
-Entity: Entities reference data that act as an abbreviation or can be found at an external location. 
+**Entity**: Entities reference data that act as an abbreviation or can be found at an external location. 
 
 Most common entites are:-
 
-Internal Entity: If an entity is declared within a DTD it is called as internal entity.
-Syntax:- <!ENTITY entity_name "entity_value">
+**Internal Entity**: If an entity is declared within a DTD it is called as internal entity.
+*Syntax:- <!ENTITY entity_name "entity_value">*
 
-External Entity: If an entity is declared outside a DTD it is called as external entity. Identified by 'SYSTEM'.
-Syntax:- <!ENTITY entity_name SYSTEM "entity_value">
+**External Entity**: If an entity is declared outside a DTD it is called as external entity. Identified by 'SYSTEM'.
+*Syntax:- <!ENTITY entity_name SYSTEM "entity_value">*
 
-Parameter Entity: The purpose of a parameter entity is to enable you to create reusable sections of replacement text. (If not understood, You will understand more clearly in later.)
-
+**Parameter Entity**: The purpose of a parameter entity is to enable you to create reusable sections of replacement text. (If not understood, You will understand more clearly in later.)
+*Syntax:- <!ENTITY % entity "another entity (Internal or External)">*
 
 
 ## What is XXE?
