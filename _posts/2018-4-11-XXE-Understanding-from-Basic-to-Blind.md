@@ -7,13 +7,13 @@ But first let's understand some basic keywords.
 
 Most common entites are:-
 
-**Internal Entity**: If an entity is declared within a DTD it is called as internal entity.
+**Internal Entity**: If an entity is declared within a DTD it is called as internal entity.<br>
 *Syntax:- <!ENTITY entity_name "entity_value">*
 
-**External Entity**: If an entity is declared outside a DTD it is called as external entity. Identified by 'SYSTEM'.
+**External Entity**: If an entity is declared outside a DTD it is called as external entity. Identified by 'SYSTEM'.<br>
 *Syntax:- <!ENTITY entity_name SYSTEM "entity_value">*
 
-**Parameter Entity**: The purpose of a parameter entity is to enable you to create reusable sections of replacement text. (If not understood, You will understand more clearly in later.)
+**Parameter Entity**: The purpose of a parameter entity is to enable you to create reusable sections of replacement text. (If not understood, You will understand more clearly in later.)<br>
 *Syntax:- <!ENTITY % entity "another entity (Internal or External)">*
 
 
