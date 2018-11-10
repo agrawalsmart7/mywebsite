@@ -21,7 +21,7 @@ Most common entites are:-
 *Syntax:-* `<!ENTITY entity_name SYSTEM "entity_value">`
 
 **Parameter Entity**: The purpose of a parameter entity is to enable you to create reusable sections of replacement text. (If not understood, You will understand more clearly in later.)<br>
-*Syntax:-* `<!ENTITY % entity "another entity (Internal or External)">`
+*Syntax:-* `<!ENTITY % entity "another entity (Internal or External)">`<br><br>
 
 
 ## What is XXE?
