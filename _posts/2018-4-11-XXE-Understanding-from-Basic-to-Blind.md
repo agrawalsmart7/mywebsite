@@ -2,11 +2,11 @@ Hi all,
 
 In this post we will cover these following topics.
 
-What is XXE?
-How to confirm XXE?
-How Exploit Basic XXE?
-How Blind XXE works?
-and a alternative of blind XXE payload.
+What is XXE?<br>
+How to confirm XXE?<br>
+How Exploit Basic XXE?<br>
+How Blind XXE works?<br>
+and a alternative of blind XXE payload.<br>
 
 But first let's understand some basic keywords.
 
