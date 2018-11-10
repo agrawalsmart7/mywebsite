@@ -51,7 +51,7 @@ Now let's understand this.
 2.After that, we define root element after the DOCTYPE i.e. root, next, we define the Entity and that entity contains SYSTEM attribute which indicate that the entity is External.<br>
 3.After that we define our server's ip because we want to let the target server to send the request to us.
 
-Now when you give that payload to mis-configured XML parser, the mis-configured XML parser will parse the results and it will process our External entity by **requesting to your server.**
+Now when you give that payload to mis-configured XML parser, the mis-configured XML parser will parse the entity `&test;` and we define our server ip, So, it will process our External entity by **requesting to your server ip.**
 
 So if you got a new connection in the log file then it is confirmed that you have found XXE.
 
@@ -113,7 +113,7 @@ Now, *Have anyone arise a question that why **we call the dtd from attacker's se
 
 this would be easier than before? Yes it is, but it is not going to work. 
 
-**According to [XML_DOC](https://www.w3.org/TR/xml/#wfc-PEinInternalSubset), actually parameter entity can't be called inside the DTD subset they can be called in the External subset (like we did in Payload no 2). It will be forbidden, hence you will get the forbidden error.**
+**According to [XML_DOC](https://www.w3.org/TR/xml/#wfc-PEinInternalSubset), parameter entity can't be called inside the DTD subset, they can be called in the External subset (like we did in Payload no 2). It will be forbidden, hence you will get the forbidden error.**
 
 So that's the reason why we can't run above payload.
 
