@@ -61,9 +61,9 @@ Our main target is to read local files of the web server and this can be done us
 
 `<?xml version="1.0"?><!DOCTYPE root [<!ENTITY test SYSTEM 'file:///etc/passwd'>]><root>&test;</root>`,
 
-The xml parser will process this payload as same as above but instead of requesting to your server now it will request to locally, with the file protocol, it will grep the file contents and shown to us. Hence, we can read local file of the webserver.
+The xml parser will process this payload as same as above but instead of requesting to your server now it will request to locally, with the file protocol, it will grep the file contents and shown to us. Hence, we can read local file of the webserver.<br><br>
 
-<br><br>## **What if the xml data is not showing to us? (Blind XXE Case)**
+## **What if the xml data is not showing to us? (Blind XXE Case)**
 
 Okay,
 
