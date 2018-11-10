@@ -63,7 +63,7 @@ Our main target is to read local files of the web server and this can be done us
 
 The xml parser will process this payload as same as above but instead of requesting to your server now it will request to locally, with the file protocol, it will grep the file contents and shown to us. Hence, we can read local file of the webserver.
 
-## What if the xml data is not showing to us? (Blind XXE Case)
+<br><br>## **What if the xml data is not showing to us? (Blind XXE Case)**
 
 Okay,
 
