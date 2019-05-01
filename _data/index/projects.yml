@@ -11,7 +11,7 @@
 - name: Python
   i18n: 
   gh_user: agrawalsmart7
-  repo: autocon
+  repo: autorecon
   img: /static/assets/img/landing/python.png
   desc: This is the Automated tool for pentesters. For full description please read Readme file.
 
