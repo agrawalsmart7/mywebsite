@@ -9,16 +9,15 @@ Index
 2. Nmap scanning
 3. Exploring port 80
 4. Finding the CMS 
-5. Searchsploit for finding the CMS.
+5. Searchsploit.
 6. Exploiting CMS Metasploit.
 7. Privilege Escalation through SUID bit.
 
-Let's start this.
+**Let's start this**
 
 Strating from arp-scanning for find the IP addresses on the network.
 Command:- `arp-scan -l`<br>
-It will list out the IP addresses
-	
+
 After finding the IP address, I started NMAP (a Powerfull Network Mapping Tool).<br>
 
 	`Command:- nmap -sC -sV <ip>`
