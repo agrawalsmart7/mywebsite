@@ -1,6 +1,6 @@
 Hi all,
 
-This is a walkthrough of a vulnhub machine, let's started.
+This is a walkthrough of a vulnhub machine.
 
 Index
 =====
