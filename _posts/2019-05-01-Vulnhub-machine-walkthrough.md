@@ -20,9 +20,9 @@ Command:- `arp-scan -l`<br>
 
 After finding the IP address, I started NMAP (a Powerfull Network Mapping Tool).<br>
 
- `Command:- nmap -sC -sV <ip>`<br>
- `-sC: Run Nmap Common Scripts`<br>
- `-sV: For determining the service Versions.`
+	 `Command:- nmap -sC -sV <ip>`
+	 `-sC: Run Nmap Common Scripts`
+	 `-sV: For determining the service Versions.`
 	
 <br>Here are the results from NMAP,<br>
 
