@@ -25,7 +25,7 @@ After finding the IP address, I started NMAP (a Powerfull Network Mapping Tool).
 	
 <br>Here are the results from NMAP,<br>
 
-<img src="../../../nmap-scan.png" width="1200" height="600">
+<img src="../../../nmap-scan.png" width="900" height="600">
 
 <br>Starting from 80 port, I saw Drupal was using. Tried to get the exact version of it to see the vulnerabilities if present on that version. Wappaulizer will work for us (if leaks). 
 
@@ -35,11 +35,11 @@ After searching vulnerable through searchsploit. I come to know that it was Vuln
 
 It was vulnerale to Drupalgeddon Exploit. I checked it if its present in Metasploit.
 
-<img src="../../../drupal.png" width="1200" height="600">
+<img src="../../../drupal.png" width="900" height="600">
 
 And yes. So I quickly use that exploit, and run that. 
 
-<br><img src="../../../meterpreter.png" width="1200" height="600">
+<br><img src="../../../meterpreter.png" width="900" height="600">
 
 <br>Now, we got a shell, after seeing the user id by `getuid` it was a normal user.
 
@@ -57,7 +57,7 @@ How to Escalate my Privileges?
 	
 <br>So This outputs all the programs which uses SETUID permission as you can see below.<br>
 
-<img src="../../../privilege.png" width="1200" height="600">
+<img src="../../../privilege.png" width="900" height="600">
 
 <br>There are many programs which have SETUID permissions. Now How do we find our program which makes us privileged?
 <br>Basically you need to find those programs which can allow you to escape to the shell OR in other words they have interactive mode. 
@@ -67,7 +67,7 @@ How to Escalate my Privileges?
 
 <br>Now this find command will exec /bin/sh shell in root mode, hence we have the root privileges into the shell.
 
-<br><img src=../../../"root.png" width="1200" height="600">
+<br><img src=../../../"root.png" width="900" height="600">
 
 <br>And yes!. We got a root shell :)	
 
