@@ -69,8 +69,6 @@ Escalating Privileges
 
 <br>And yes!. We got a root shell :)	
 
-<br>This machine was so good, gives new things to learn. <br>
-
-Thanks for your time for reading this. 
+That's it. Thanks for your time for reading this. 
 
 Have a good day. :)
