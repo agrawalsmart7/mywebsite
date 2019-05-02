@@ -2,6 +2,19 @@ Hi all,
 
 This is a walkthrough of a vulnhub machine, let's started.
 
+Index
+=====
+
+1. Arp-scanning
+2. Nmap scanning
+3. Exploring port 80
+4. Finding the CMS 
+5. Searchsploit for finding the CMS.
+6. Exploiting CMS Metasploit.
+7. Privilege Escalation through SUID bit.
+
+Let's start this.
+
 Strating from arp-scanning for find the IP addresses on the network.
 Command:- `arp-scan -l`<br>
 It will list out the IP addresses
@@ -16,18 +29,24 @@ After finding the IP address, I started NMAP (a Powerfull Network Mapping Tool).
 
 <img src="../../../nmap-scan.png" width="1200" height="600">
 
-<br>Starting from 80 port, I saw Drupal was using. Let's find out the exact version of it to see the vulnerabilities if present on that version. Wappaulizer will work for us (if leaks). It says Drupal 7.
-Let's find out if its vulnerable through searchsploit.
+<br>Starting from 80 port, I saw Drupal was using. Tried to get the exact version of it to see the vulnerabilities if present on that version. Wappaulizer will work for us (if leaks). 
 
-It says Drupalgeddon Exploit. I checked it if its present in Metasploit.
+And yes, It says **Drupal 7.**
+
+After searching vulnerable through searchsploit. I come to know that it was Vulnerable.
+
+It was vulnerale to Drupalgeddon Exploit. I checked it if its present in Metasploit.
 
 <img src="../../../drupal.png" width="1200" height="600">
 
-So I quickly use that exploit, and run that attack. 
+And yes. So I quickly use that exploit, and run that. 
 
 <br><img src="../../../meterpreter.png" width="1200" height="600">
 
 <br>Now, we got a shell, after seeing the user id by `getuid` it was a normal user.
+
+How to Escalate my Privileges?
+=============================
 
 <br>So, my next target is to escalate my privileges to root. I checked if the kernel is vulnerable by `uname -a` but it was not.
 <br>So I move to the second way, I checked to what programs are have SETUID set. 
@@ -52,8 +71,10 @@ So I quickly use that exploit, and run that attack.
 
 <br><img src=../../../"root.png" width="1200" height="600">
 
-<br>We got a shell :)	
+<br>And yes!. We got a root shell :)	
 
 <br>This machine was so good, gives new things to learn. <br>
 
 Thanks for your time for reading this. 
+
+Have a good day. :)
