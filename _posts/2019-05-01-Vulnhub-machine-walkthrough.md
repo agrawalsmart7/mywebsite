@@ -20,9 +20,9 @@ Command:- `arp-scan -l`<br>
 
 After finding the IP address, I started NMAP (a Powerfull Network Mapping Tool).<br>
 
-	`Command:- nmap -sC -sV <ip>`
-	`-sC: Run Nmap Common Scripts`
-	`-sV: For determining the service Versions.`
+`Command:- nmap -sC -sV <ip>`
+`-sC: Run Nmap Common Scripts`
+`-sV: For determining the service Versions.`
 	
 <br>Here are the results from NMAP,<br>
 
@@ -47,7 +47,7 @@ And yes. So I quickly use that exploit, and run that.
 How to Escalate my Privileges?
 =============================
 
-<br>So, my next target is to escalate my privileges to root. I checked if the kernel is vulnerable by `uname -a` but it was not.
+<br>So, my next target was to escalate my privileges to root. I checked if the kernel is vulnerable by `uname -a` but it was not.
 <br>So I move to the second way, I checked to what programs are have SETUID set. 
 <br>Setuid is a special file permission in unix/Linux, which permits the user to run that program with higher privileges.<br>
 	
