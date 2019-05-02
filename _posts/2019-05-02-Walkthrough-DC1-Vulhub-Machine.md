@@ -2,8 +2,7 @@ Hi all,
 
 This is a walkthrough of a vulnhub machine.
 
-Index
-=====
+<h2>Index<h2>
 
 1. Arp-scanning
 2. Nmap scanning
@@ -15,7 +14,7 @@ Index
 
 **Let's start this**
 
-Strating from arp-scanning for find the IP addresses on the network.
+Starting from arp-scanning for find the IP addresses on the network.
 Command:- `arp-scan -l`<br>
 
 After finding the IP address, I started NMAP (a Powerfull Network Mapping Tool).<br>
