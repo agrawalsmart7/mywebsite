@@ -61,11 +61,11 @@ Escalating Privileges
 <br><b>Basically you need to find those programs which can allow you to escape to the shell OR in other words they have interactive mode.</b> 
 
 <br>So in find utility -i allow us to escape to the shell.<br>
-	Command: find /home -exec /bin/sh -i \;
+	`Command: find /home -exec /bin/sh -i \;`
 
 <br>Now this find command will exec /bin/sh shell in root mode, hence we have the root privileges into the shell.
 
-<br><img src=../../../"root.png" width="900" height="600">
+<br><img src="../../../root.png" width="900" height="600">
 
 <br>And yes!. We got a root shell :)	
 
