@@ -1,11 +1,12 @@
-Hi all, <br><br>
+Hi all,
 
-This is a walkthrough of a vulnhub machine, let's started.<br>
+This is a walkthrough of a vulnhub machine, let's started.
 
 Strating from arp-scanning for find the IP addresses on the network.
-	`Command:- arp-scan -l will list out the IP addresses`
+Command:- `arp-scan -l`<br>
+It will list out the IP addresses
 	
-<br>After finding the IP address, I started NMAP (a Powerfull Network Mapping Tool).<br>
+After finding the IP address, I started NMAP (a Powerfull Network Mapping Tool).<br>
 
 	`Command:- nmap -sC -sV <ip>`
 	`-sC: Run Nmap Common Scripts`
@@ -16,13 +17,13 @@ Strating from arp-scanning for find the IP addresses on the network.
 <img src="nmap-scan.png">
 
 <br>Starting from 80 port, I saw Drupal was using. Let's find out the exact version of it to see the vulnerabilities if present on that version. Wappaulizer will work for us (if leaks). It says Drupal 7.
-<br>Let's find out if its vulnerable through searchsploit.
+Let's find out if its vulnerable through searchsploit.
 
-<br>It says Drupalgeddon Exploit. I checked it if its present in Metasploit.
+It says Drupalgeddon Exploit. I checked it if its present in Metasploit.
 
-<br><img src="drupal.png">
+<img src="drupal.png">
 
-<br>o I quickly use this, and run that attack. `
+So I quickly use that exploit, and run that attack. 
 
 <br><img src="meterpreter.png">
 
