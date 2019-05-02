@@ -2,7 +2,7 @@ Hi all,
 
 This is a walkthrough of a vulnhub machine.
 
-<h2>Index<h2>
+<h2>Index</h2>
 
 1. Arp-scanning
 2. Nmap scanning
