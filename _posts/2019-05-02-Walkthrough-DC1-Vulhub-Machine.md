@@ -58,7 +58,7 @@ Escalating Privileges
 <img src="../../../privilege.png" width="900" height="600">
 
 <br>There are many programs which have SETUID permissions. Now How do we find our program which makes us privileged?
-<br>Basically you need to find those programs which can allow you to escape to the shell OR in other words they have interactive mode. 
+<br><b>Basically you need to find those programs which can allow you to escape to the shell OR in other words they have interactive mode.</b> 
 
 <br>So in find utility -i allow us to escape to the shell.<br>
 	Command: find /home -exec /bin/sh -i \;
