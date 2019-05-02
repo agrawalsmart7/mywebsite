@@ -27,9 +27,7 @@ After finding the IP address, I started NMAP (a Powerfull Network Mapping Tool).
 
 <img src="../../../nmap-scan.png" width="900" height="600">
 
-<br>Starting from 80 port, I saw Drupal was using. Tried to get the exact version of it to see the vulnerabilities if present on that version. Wappaulizer will work for us (if leaks). 
-
-And yes, It says **Drupal 7.**
+<br>Starting from 80 port, I saw Drupal was using. And it was **Drupal 7.**
 
 After searching vulnerable through searchsploit. I come to know that it was Vulnerable.
 
