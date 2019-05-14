@@ -64,11 +64,13 @@ Your-IP --> `192.168.0.9`<br>
 Server-ip--> `192.168.0.10` and `192.168.217.103`<br>
 Workstation --> `192.168.217.105` 
 
-Here you can see that there is a which have two network cards. Out of one was same as the workstation. But it was non-routable from our PC but **not** for the server.
+Here you can see that there is your server which have two network cards. Out of one was same as the workstation. But it was non-routable from our PC but **not** for the server.
 
-So first you do `ssh -D 990 user@example.com`
+So you provide this:- `ssh -D 990 user@example.com`
 
-Here, you set your SSH server as Proxy. Now when you load the page of workstation from your local computer then you will see that you can access it easily. For checking, you can try to scan the workstation with Scanner tools like Nmap from your local computer. Isn't it great? 
+You set your SSH server as Proxy. Now when you load the page of workstation from your local computer then you will see that you can access it easily. For checking, you can try to scan the workstation with Scanner tools like Nmap from your local computer. Isn't it great? 
+
+For say, you have creds which can work on the workstation too, then you can ssh'ed to the workstation. So this is another way of lateral movement in the network.
 
 So, that's it. As I said, my idea was to give you a basic overview of the ssh port forwardings in simple way. Hope it helps you in anyway.
 
