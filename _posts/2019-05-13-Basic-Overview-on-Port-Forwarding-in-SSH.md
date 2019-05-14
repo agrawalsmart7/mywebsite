@@ -64,7 +64,7 @@ Your-IP --> `192.168.0.9`<br>
 Server-ip--> `192.168.0.10` and `192.168.217.103`<br>
 Workstation --> `192.168.217.105` 
 
-Here you can see that there is your server which have two network cards. Out of one was same as the workstation. But it was non-routable from our PC but **not** for the server.
+Here you can see that there is your server which have two network cards. Out of one was same as the workstation. And that is why it is non-routable from our PC but **not** for the server.
 
 So you provide this:- `ssh -D 990 user@example.com`
 
