@@ -1,5 +1,4 @@
-SSH Port Forwarding
-===================
+<h1><u><b>SSH Port Forwarding</b></u></h1>
 
 This blog post is just to give you a basic overview on Port Forwardings in SSH.
 
@@ -9,7 +8,7 @@ So, Port forwarding are three types in SSH.
 2. Remote Port Forwarding
 3. Dynamic Port Forwarding
 
-<h2>Local Port Forwarding</h2>
+<h2><b>Local Port Forwarding</b></h2>
 
 <b>Syntax:-</b> `ssh -L sourceip:sourceport:remotelocalhost:remoteport user@example.com`
 
@@ -29,7 +28,7 @@ So you go to 192.168.0.9:990 on your local machine's browser, then all the traff
 
 This tricks helps when you found a local website, or database which was not for publically access, through this you can access them locally.
 
-<h2>Remote Port Forwarding</h2>
+<h2><b>Remote Port Forwarding</b></h2>
 
 <b>Syntax:-</b> `ssh -R remotehost:remoteport:sourceip:sourceport user@example.com`
 
@@ -40,7 +39,7 @@ So let's take a example of this.
 Now what will happen here is when ever if any one access the localhost on the remote server then they all the traffic will forwards to our server running on the host 192.168.0.9 at port 990.
 Now, we can force the user to type the credentials of their accounts, which user can easily be in the trap. Right?
 
-<h2>Dynamic Port Forwarding</h2>
+<h2><b>Dynamic Port Forwarding</b></h2>
 
 <b>Syntax:-</b> `ssh -D 990 user@example.com`
 
