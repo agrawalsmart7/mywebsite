@@ -28,6 +28,12 @@ So you go to 192.168.0.9:990 on your local machine's browser, then all the traff
 
 This tricks helps when you found a local website, or database which was not for publically access, through this you can access them locally.
 
+You can also do multiple port forwarding with this command.
+
+`ssh -L 9990:localhost:80 9991:localhost:80 user@example.com`
+
+This allows you to do multiple port forwarding. Move on to next. 
+
 <h2><b>Remote Port Forwarding</b></h2><br>
 
 <b>Syntax:-</b> `ssh -R remotehost:remoteport:sourceip:sourceport user@example.com`
