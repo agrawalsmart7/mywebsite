@@ -1,4 +1,4 @@
-<h1><u>SSH Port Forwarding</b></h1>
+<h1>SSH Port Forwarding</b></h1>
 
 This blog post is just to give you a basic overview on Port Forwardings in SSH.
 
