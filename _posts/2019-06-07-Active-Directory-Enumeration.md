@@ -10,12 +10,12 @@ So our domain is "ad.lab"
 
 This is my Domain Controller (DC) --> 192.168.0.8
 
-<img src="../../ad_front.png">
+<img src="https://github.com/agrawalsmart7/website/ad_front.png">
 
 
 This is my client which registers in DC as "utkarsh123" --> 
 
-<img src="../../capture.png">
+<img src="https://github.com/agrawalsmart7/website/capture.png">
 
 Image client 
 
