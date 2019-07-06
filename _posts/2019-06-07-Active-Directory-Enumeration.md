@@ -8,12 +8,12 @@ Always practice in Enviroment, so for that I have created a Virtual Playground i
 
 So our domain is "ad.lab"
 
-This is my Domain Controller (DC) --> 192.168.0.8
+This is my Domain Controller (DC) IP is 192.168.0.8
 
 <img src="../../../ad_front.png">
 
 
-This is my client which registers in DC as "utkarsh123" --> 
+This is my client IP is 192.168.0.10 
 
 <img src="../../../Capture.PNG">
 
