@@ -13,12 +13,9 @@ This is my Domain Controller (DC) IP is 192.168.0.8
 <img src="../../../ad_front.png" height='50%' width="100%">
 
 
-This is my client IP is 192.168.0.10 
+This is my client where IP is 192.168.0.10 
 
 <img src="../../../Capture.PNG" height='50%' width="100%">
-
-Image client 
-
 
 
 So let's get started,
