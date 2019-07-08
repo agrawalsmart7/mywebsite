@@ -2,11 +2,15 @@ Hello all,
 
 Welcome to this post, this post covers How to enumerate Active Directory Environment. I just want to share what I learned #SharingisCaring. 
 
+So What is Active Directory?
+
+Active directory is a service which stores the objects into a centralised way. Objects like users, Computers, Groups etc. All these info are stored in Domain Controller. AD uses LDAP to retrieve the data from the Domain controller. It also uses DNS for let the client to locate the DC. More info is [here](https://searchwindowsserver.techtarget.com/definition/Active-Directory).
+
 This post skips the part of "Installing Active directory in Windows 2008 server."
 
-Always practice in Enviroment, so for that I have created a Virtual Playground in which there is a domain controller and client. 
+Always practice in Enviroment, so for that Virtual Playground includes a Domain Controller (windows server 2008) and Client (Windows 7). 
 
-So our domain is "ad.lab"
+So our domain is "**ad.lab**"
 
 This is my Domain Controller (DC) IP is 192.168.0.8
 
@@ -21,10 +25,12 @@ This is my client where IP is 192.168.0.10
 So let's get started,
 
 The first stage would be is to get into the network of the target. 
-So for that you will have to find some way to get in for ex, getting Password hash with Responder, 
-any service vulnerable for exploiting, Social Engineering etc 
-So for the sake of simplicity I already uploaded a EXE file onto the target machine. 
+And it can be in any way like through the use of Responder, Exploiting any service vulnerability, Social Engineering etc.
+
+So for the sake of simplicity what I have done is  I already uploaded a EXE file onto the target machine which is a part of domain.
 The file was created with meterpreter payload with msfvenom.
+
+So what will happen if user opens up the exe file? The target machine will send a GET request to our machine because that how the meterpreter payload works, 
 
 So we have all set to exploit, so lets exploit it.
 
