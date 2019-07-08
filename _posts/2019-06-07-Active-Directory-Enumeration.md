@@ -14,12 +14,12 @@ So our domain is "**ad.lab**"
 
 This is my Domain Controller (DC) IP is 192.168.0.8
 
-<img src="../../../ad_front.png" height='50%' width="100%">
+<img src="../../../ad_front.png" height='50%' width="70%">
 
 
 This is my client where IP is 192.168.0.10 
 
-<img src="../../../Capture.PNG" height='50%' width="100%">
+<img src="../../../Capture.PNG" height='50%' width="70%">
 
 
 So let's get started,
@@ -27,65 +27,59 @@ So let's get started,
 The first stage would be is to get into the network of the target. 
 And it can be in any way like through the use of Responder, Exploiting any service vulnerability, Social Engineering etc.
 
-So for the sake of simplicity what I have done is  I already uploaded a EXE file onto the target machine which is a part of domain.
-The file was created with meterpreter payload with msfvenom.
+First stage:- 
 
-So what will happen if user opens up the exe file? The target machine will send a GET request to our machine because that how the meterpreter payload works, 
+The first step would be is to get into the network of the target. There are multiple way to do it like LLMNR & NBTNS Poisoing, Exploiting network service, Social Engineering etc. But for the sake of simplicity I already uploaded a EXE file onto the target machine. The file was created with meterpreter reverse payload with **msfvenom**.
 
-So we have all set to exploit, so lets exploit it.
+So what will happen if user opens up that EXE file? So when the binary loads, it will spawn a shell back to the listener and hence we get control over the shell.
 
-After opening the file, as you can see the meterpreter connection to our machine hence we are in.
+so lets exploit it.
 
-Image
+<img src="../../meterpreter.png" height="50%" width="70%">
 
+So we got a meterpreter shell.
 
-Now first thing we should check the domain name, 
+Is the target machine is on a domain? So lets check it,
 
 command:- wmic computersystem get domain
 
 And here it is
 
-Image
+<img src="../../get_domain.png" height="50%" width="70%">
 
-Now we know the Domain name of domain controller, so its time to enumerate the information from Domain controller.
+Since this user is on domain, so its time to enumerate the information from DC.
 
 I use Powerview for enumeration. It was written by HarmJoy. [Correction]
 
+But for doing enumeration with powerview we need to import it in Powershell. 
 
-This command will list out the domain groups in ADDS 
+So lets load powershell in meterpreter. 
 
-Command: Get-NetGroup
+Command: `load powershell` 
+Command2: `powershell_import /powerview_location_on_your_local_disk`
 
-Image
+Now we have the Powerview into the powershell, we can run its commands.
 
+This command will list out the domain groups in ADDS
 
-After we know the domain groups, then try to enumerate the users who are live in them.
+So our main target is to find out who is admin. This command is PowerView will help to identify the admin.
 
 Command: Get-NetGroupMember 
 
-Image
+<img src="../../net_group_mem.png">
 
-By default it get the "Domain Admins" but you can change it if you see any interesting Group like this.
+So we now know who is Admin. Its worth to check if any misconfiguration is in their profile. In AD there are lot of options for security so if these options are not set correctly then the attacker can get big amount of data.
 
-Command: Get-NetGroupMember Groupname
-
-Image
-
-
-So we now know who is Admin. Its worth to check if any misconfiguration is in their profile.
+This command of PowerView will help to find the information leakeges
 
 Command: Get-NetUser username
 
 Image
 
-Why I said Misconfiguration is because they often allow to see the email, Phone number etc which can be helpful for Social Engineering.
 
+So what exactly misconfiguration is that they often allow to see the email, Phone number etc which can be helpful for Social Engineering.
 
-
-
-
-
-
+So we got the admin information leakeges.
 
 
 
