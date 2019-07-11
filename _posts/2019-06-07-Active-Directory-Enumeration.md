@@ -24,22 +24,21 @@ This is my client where IP is 192.168.0.10
 
 So let's get started,
 
-The first stage would be is to get into the network of the target. 
-And it can be in any way like through the use of Responder, Exploiting any service vulnerability, Social Engineering etc.
+The first stage would be is to get into the target network. 
 
-First stage:- 
+There are multiple way to do it like LLMNR & NBTNS Poisoing, Exploiting network service, Social Engineering etc. 
 
-The first step would be is to get into the network of the target. There are multiple way to do it like LLMNR & NBTNS Poisoing, Exploiting network service, Social Engineering etc. But for the sake of simplicity I already uploaded a EXE file onto the target machine. The file was created with meterpreter reverse payload with **msfvenom**.
+But for the sake of simplicity I already uploaded a EXE file onto the target machine. The file was created with meterpreter reverse payload with **msfvenom**.
 
 So what will happen if user opens up that EXE file? So when the binary loads, it will spawn a shell back to the listener and hence we get control over the shell.
 
-so lets exploit it.
+Okay, lets exploit it.
 
 <img src="../../meterpreter.png" height="50%" width="70%">
 
 So we got a meterpreter shell.
 
-Is the target machine is on a domain? So lets check it,
+Is the target machine is on a domain? Let's check it,
 
 command:- wmic computersystem get domain
 
