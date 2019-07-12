@@ -44,7 +44,7 @@ command:- wmic computersystem get domain
 
 And here it is
 
-<img src="../../../get_domain.png" height="50%" width="70%">
+<img src="../../../getdomain.png" height="50%" width="70%">
 
 Since this user is on domain, so its time to enumerate the information from DC.
 
