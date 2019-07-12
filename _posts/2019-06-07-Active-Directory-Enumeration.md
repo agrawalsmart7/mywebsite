@@ -34,7 +34,7 @@ So what will happen if user opens up that EXE file? So when the binary loads, it
 
 Okay, lets exploit it.
 
-<img src="../../meterpreter.png" height="50%" width="70%">
+<img src="../../../meterpreter.png" height="50%" width="70%">
 
 So we got a meterpreter shell.
 
@@ -44,7 +44,7 @@ command:- wmic computersystem get domain
 
 And here it is
 
-<img src="../../get_domain.png" height="50%" width="70%">
+<img src="../../../get_domain.png" height="50%" width="70%">
 
 Since this user is on domain, so its time to enumerate the information from DC.
 
